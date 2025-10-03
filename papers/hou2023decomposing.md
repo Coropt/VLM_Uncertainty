@@ -24,8 +24,8 @@ H(q(Y|X)) = I(Y;C|X) + \mathbb{E}_{q(C|X)}\big[ H(q(Y|X \oplus C)) \big]
 $$
 
 where:  
-- \(I(Y;C|X)\) measures disagreement across clarifications → **aleatoric uncertainty**.  
-- \(\mathbb{E}[H(\cdot)]\) measures average entropy across clarified inputs → **epistemic uncertainty**.  
+- $I(Y;C|X)$ measures disagreement across clarifications → **aleatoric uncertainty**.  
+- $\mathbb{E}[H(\cdot)]$ measures average entropy across clarified inputs → **epistemic uncertainty**.  
 
 ---
 
