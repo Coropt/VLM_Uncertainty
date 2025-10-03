@@ -23,10 +23,10 @@ Instead of treating the entire reasoning sequence as a joint probability (which 
 ## Key Equations
 1. **Joint formulation (intractable):**  
    $$
-   P_{\mathcal{M}}(x_{\text{ans}} \mid x_{\text{instr}}) 
-   = \sum_{x_{\text{cot}}} P_{\mathcal{M}}(x_{\text{ans}} \mid x_{\text{cot}}, x_{\text{instr}}) \,
-   P_{\mathcal{M}}(x_{\text{cot}} \mid x_{\text{instr}})
-   $$
+P_{\mathcal{M}}(x_{\text{ans}} \mid x_{\text{instr}}) 
+= \sum_{x_{\text{cot}}} P_{\mathcal{M}}(x_{\text{ans}} \mid x_{\text{cot}}, x_{\text{instr}}) 
+P_{\mathcal{M}}(x_{\text{cot}} \mid x_{\text{instr}})
+$$
    where $x_{\text{cot}}$ spans all possible reasoning sequences (combinatorially huge).  
 
 2. **Approximation with attention chain:**  
@@ -50,11 +50,6 @@ Instead of treating the entire reasoning sequence as a joint probability (which 
 - Proposes a **more faithful and interpretable** UQ method for LLMs.  
 - Reduces the bias caused by filler tokens in long CoT reasoning.  
 - Provides a practical approximation to otherwise intractable joint probability computations.  
-
----
-
-## Relation to Prior Work
-- **Hou et al. (2024):** decomposed uncertainty via **input clarification** (aleatoric vs epistemic).  
-- **Li et al. (2025):** improves uncertainty quantification by focusing on **salient reasoning tokens** instead of all reasoning tokens.  
+  
 
 
