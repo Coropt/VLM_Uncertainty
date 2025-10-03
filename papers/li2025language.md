@@ -21,12 +21,12 @@ Instead of treating the entire reasoning sequence as a joint probability (which 
 ---
 
 ## Key Equations
-1. **Joint formulation (intractable):**  
+1. **Joint formulation (intractable):**
    $$
-P_{\mathcal{M}}(x_{\text{ans}} | x_{\text{instr}}) 
-= \sum_{x_{\text{cot}}} P_{\mathcal{M}}(x_{\text{ans}} | x_{\text{cot}}, x_{\text{instr}}) 
-P_{\mathcal{M}}(x_{\text{cot}} | x_{\text{instr}})
-$$
+    P_{\mathcal{M}}(x_{\text{ans}} | x_{\text{instr}}) 
+    = \sum_{x_{\text{cot}}} P_{\mathcal{M}}(x_{\text{ans}} | x_{\text{cot}}, x_{\text{instr}}) 
+    P_{\mathcal{M}}(x_{\text{cot}} | x_{\text{instr}})
+   $$
    where $x_{\text{cot}}$ spans all possible reasoning sequences (combinatorially huge).  
 
 2. **Approximation with attention chain:**  
