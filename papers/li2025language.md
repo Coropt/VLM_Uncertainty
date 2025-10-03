@@ -21,20 +21,20 @@ Instead of treating the entire reasoning sequence as a joint probability (which 
 ---
 
 ## Key Equations
-1. **Joint formulation (intractable):**
-   $$
-    P_{\mathcal{M}}(x_{\text{ans}} | x_{\text{instr}}) 
-    = \sum_{x_{\text{cot}}} P_{\mathcal{M}}(x_{\text{ans}} | x_{\text{cot}}, x_{\text{instr}}) 
-    P_{\mathcal{M}}(x_{\text{cot}} | x_{\text{instr}})
-   $$
-   where $x_{\text{cot}}$ spans all possible reasoning sequences (combinatorially huge).  
 
-2. **Approximation with attention chain:**  
-   $$
-   \tilde{P}_{\mathcal{M}}(x_{\text{ans}} \mid x_{\text{instr}}) 
-   \approx P_{\mathcal{M}}(x_{\text{ans}} \mid x_{\text{attn}}, x_{\text{instr}})
-   $$
-   where $x_{\text{attn}}$ is a distilled sequence of *key reasoning tokens* identified by attention.  
+1. **Joint formulation (intractable):**
+
+   ![equation1](https://latex.codecogs.com/svg.latex?P_%7B%5Cmathcal%7BM%7D%7D%28x_%7B%5Ctext%7Bans%7D%7D%20%5Cmid%20x_%7B%5Ctext%7Binstr%7D%7D%29%20%3D%20%5Csum_%7Bx_%7B%5Ctext%7Bcot%7D%7D%7D%20P_%7B%5Cmathcal%7BM%7D%7D%28x_%7B%5Ctext%7Bans%7D%7D%20%5Cmid%20x_%7B%5Ctext%7Bcot%7D%7D%2C%20x_%7B%5Ctext%7Binstr%7D%7D%29%20P_%7B%5Cmathcal%7BM%7D%7D%28x_%7B%5Ctext%7Bcot%7D%7D%20%5Cmid%20x_%7B%5Ctext%7Binstr%7D%7D%29)
+
+   where $x_{\text{cot}}$ spans all possible reasoning sequences (combinatorially huge).
+
+2. **Approximation with attention chain**
+
+![equation2](https://latex.codecogs.com/svg.latex?%5Ctilde%7BP%7D_%7B%5Cmathcal%7BM%7D%7D%28x_%7B%5Ctext%7Bans%7D%7D%5Cmid%20x_%7B%5Ctext%7Binstr%7D%7D%29%20%5Capprox%20%5Csum_%7Bx_%7B%5Ctext%7Battn%7D%7D%5E%7B%5Cprime%7D%20%5Cin%20S%7D%20P_%7B%5Cmathcal%7BM%7D%7D%28x_%7B%5Ctext%7Bans%7D%7D%2C%20x_%7B%5Ctext%7Battn%7D%7D%5E%7B%5Cprime%7D%20%5Cmid%20x_%7B%5Ctext%7Binstr%7D%7D%29)
+
+where $x_{\text{attn}}^{\prime}\\in S$ is one distilled attention-chain; $S$ is a manageable subset.
+
+
 
 ---
 
